@@ -5,7 +5,7 @@ Notes App Management System
 # NotesApp Project Setup
 
 1. Clone the repository
-2. cd <root-project>
+2. cd `root-directory`
 3. run `npm install` - all libraries should be downloaded
 4. run `ng serve`
 
