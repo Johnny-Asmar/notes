@@ -1,0 +1,8 @@
+<app-login-component
+[formGroup]="loginForm"
+[infoErrorMessage]="infoErrorMessage"
+[hidePassword]="hidePassword"
+[isLoading]="isLoading"
+(onSubmitForm)="onSubmit()"
+(togglePasswordVisibility)="onTogglePasswordVisibility()"
+></app-login-component>

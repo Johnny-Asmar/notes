@@ -1,0 +1,9 @@
+.logout-container{
+    display: flex;
+    justify-content: end;
+}
+
+.main-container{
+    background-color: rgb(247, 249, 251);
+    height: 100vh;
+}

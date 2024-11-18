@@ -1,0 +1,33 @@
+.parent-class{
+    display: flex;
+    justify-content: center;
+}
+
+.child-class{
+    width: 90%;
+}
+
+.title{
+    font-weight: 400;
+    text-align: center;
+}
+
+.actions-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+:host ::ng-deep .mat-mdc-button .mdc-button__label{
+    color: #FFFFFF;
+  }
+
+.add-btn{
+    background-color: #2868B2;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
+    border: 0px;
+}
