@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.field-error{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.error-message{
+    text-align: center;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    background-color: #f8d7da;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+
+.info-message{
+  text-align: center;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  background-color: #d4edda;
+  border-radius: 5px;
+  padding: 5px;
+}
+  
+
+  @keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+   
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    border-top-color: #000000;
+    animation: spinner .8s linear infinite;
+  }
+
+  .button-is-loading{
+    background-color: white;
+    opacity: 0.5;
+  }
+
+  .button-disable{
+    background-color: white;
+    opacity: 0.5;
+  }
+
+
+.password-input::-ms-reveal,
+.password-input::-ms-clear,
+.confirm-password-input::-ms-reveal,
+.confirm-password-input::-ms-clear
+{
+  display: none;
+}

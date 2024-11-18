@@ -1,0 +1,81 @@
+<div class="main-container">
+    <div class="card-item-container" >
+
+    <mat-card class="card-item">
+            <mat-card-content>
+                <h2 class="title">Welcome to Notes App</h2>
+                    <div>
+
+<div class="main-form">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmitForm.emit()">
+      <p 
+        class="error-message" 
+        [ngClass]="{
+          'error-message': infoErrorMessage?.type === 'error', 
+          'info-message': infoErrorMessage?.type === 'info'
+        }">
+        {{ infoErrorMessage?.message }}
+      </p>
+  
+      <div class="grid-template">
+        <div class="full-grid-width">
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" required />
+            <mat-error class="field-error" *ngIf="formGroup.get('email')?.hasError('required')">
+              Email is required
+            </mat-error>
+            <mat-error class="field-error" *ngIf="formGroup.get('email')?.hasError('invalidEmail')">
+              Email is not valid
+            </mat-error>
+          </mat-form-field>
+        </div>
+  
+        <div class="full-grid-width">
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              class="password-input"
+              formControlName="password"
+              [type]="hidePassword ? 'password' : 'text'"
+              required
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              type="button"
+              (click)="togglePasswordVisibility.emit()"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hidePassword">
+              <mat-icon>{{ hidePassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+            </button>
+            <mat-error class="field-error" *ngIf="formGroup.get('password')?.hasError('required')">
+              Password is required
+            </mat-error>
+            <mat-error class="field-error" *ngIf="formGroup.get('password')?.hasError('noSpacesAllowed')">
+              Password should not contain spaces
+            </mat-error>
+          </mat-form-field>
+        </div>
+  
+        <div class="full-grid-width">
+          <button
+            mat-button
+            class="sign-in-btn"
+            [class.spinner]="isLoading"
+            [class.button-is-loading]="isLoading"
+            [disabled]="isLoading">
+            Log In
+          </button>
+        </div>
+  
+      </div>
+    </form>
+  </div>
+  
+</div>
+</mat-card-content>
+</mat-card>
+</div>
+</div>

@@ -1,0 +1,8 @@
+<app-notes-list
+  [notes]="filteredNotes"
+  (addNote)="handleAddNotePopup()"
+  (editNote)="handleEditNotePopup($event)"
+  (deleteNote)="handleDeleteNote($event)"
+  (filterNotes)="handleFilter($event)"
+  >
+</app-notes-list>
